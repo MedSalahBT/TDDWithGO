@@ -1,5 +1,6 @@
 package bowling
 
+import "fmt"
 
 
 type Frame struct {
@@ -11,7 +12,7 @@ func GetScore(game []Frame) (int, error) {
 	score := 0
 
 	if(len(game)!= 10){
-		return 0,nil
+		return 0,fmt.Printf("number of tuplet should be ten")
 
 	}else{
 		for i := 0; i < len(game); i++ {
