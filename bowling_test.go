@@ -99,7 +99,8 @@ func TestDoubleStrike(t *testing.T) {
 	input := []Frame{{10, 0}, {10, 0}, {5, 1}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}}
 	expected := 10+10+10+5+1+5+1
 
-	if err := scoreChecker(input, expected, nil); err != nil {
+	if err := scoreChecker(input, expected, nil); 
+	err != nil {
 		t.Fatalf("%+v\n", err)
 	}
 }
